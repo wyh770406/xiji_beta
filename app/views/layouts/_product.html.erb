@@ -1,0 +1,13 @@
+<ul>
+  <%@top_products.each do |top_product|%>
+    <li><%=link_to top_product.name,show_cat_product_path(top_product)%></li>
+  <%end%>
+
+ <!--
+             <ul>
+              <li><a href="breathe.html">呼吸机系列</a></li>
+              <li><a href="home.html">家用医疗</a></li>
+              <li><a href="hopital.html">医用产品</a></li>
+              <li><a href="annex.html">呼吸机附件</a></li>
+            </ul>-->
+</ul>

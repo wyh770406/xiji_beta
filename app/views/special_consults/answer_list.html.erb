@@ -1,0 +1,27 @@
+<% pagetitle("过往解答 - 专家咨询") %>
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav">
+          客户关怀  > 专家咨询 > 过往解答
+        </ul>
+      </div>
+      <div class="answerlist">
+        <%@special_consults.each do |special_consult|%>
+          <ul class="ask"><span>问:</span><%=special_consult.question%></ul>
+          <ul class="answer"><span>答:</span><%=special_consult.answer%></ul>
+        <%end%>
+
+
+        <div class="clear"></div>
+        <div class="page"><%= will_paginate  @special_consults,:prev_label   => '上一页',
+            :next_label   => '下一页'%>
+          共有 <%=@special_consults.total_entries%> 条记录, 分 <%=@special_consults.total_pages%> 页显示&nbsp;&nbsp;&nbsp;</div>
+      </div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>

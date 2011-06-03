@@ -1,0 +1,14 @@
+<%= error_messages_for :recent_newe %>
+<% form_for :recent_newe,
+  :url => adminpanel_recent_newe_url(@recent_newe),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :title,'标题:' %><br/>
+    <%= f.text_field :title, :size => 100 %>
+    </p>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "recent_newe", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

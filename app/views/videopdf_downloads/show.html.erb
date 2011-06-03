@@ -1,0 +1,27 @@
+<%pagetitle(@videopdf_download.name+" - 视频下载 - 下载中心")%>
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav"> 客户关怀  > 下载中心 > 视频下载 > <%=@videopdf_download.name%></ul>
+      </div>
+      <div class="productmulu">
+        <ul>
+          <li>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="580" height="480">
+              <param name="movie" value="<%=@videopdf_download.videopdf.url%>" />
+              <param name="quality" value="high" />
+              <embed src="<%=@videopdf_download.videopdf.url%>" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="580" height="480" ></embed>
+            </object>
+          </li>
+          <li></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="page"><%=link_to "下载",@videopdf_download.videopdf.url,:class=>"a1"%>&nbsp;&nbsp;&nbsp;&nbsp;<%=link_to "返回",videopdf_downloads_path,:class=>"a1"%></div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>

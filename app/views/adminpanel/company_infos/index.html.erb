@@ -1,0 +1,4 @@
+<h2><center><%=@company_info.title || "公司简介"%></center></h2>
+<div ><%=@company_info.body%></div>
+<div><%= link_to '修改', edit_adminpanel_company_info_path(@company_info) %></div>
+

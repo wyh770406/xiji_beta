@@ -1,0 +1,17 @@
+<ul>
+  <%i=0
+  @home_prduct_details.each do |product_detail|
+    if i < 3%>
+
+    <li><%=link_to image_tag(product_detail.productimg.url(:medium), :size => "136x136",:border=>0),product_detail_path(product_detail)%><br /><span><%=link_to product_detail.name,product_detail_path(product_detail)%></span></li>
+  <%else
+    %>
+
+    <li style="margin-right:0px"><%=link_to image_tag(product_detail.productimg.url(:medium), :size => "136x136",:border=>0),product_detail_path(product_detail)%><br /><span><%=link_to product_detail.name,product_detail_path(product_detail)%></span></li>
+      <%
+      end
+  i=i+1
+  end%>
+
+
+</ul>

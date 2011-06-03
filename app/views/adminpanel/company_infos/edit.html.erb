@@ -1,0 +1,11 @@
+<%= error_messages_for :company_info %>
+<% form_for :company_info,
+  :url => adminpanel_company_info_url(@company_info),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "company_info", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

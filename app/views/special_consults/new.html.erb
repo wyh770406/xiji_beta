@@ -1,0 +1,123 @@
+<%if params[:consult]!="complaint"
+  @title_str = "在线提问 - 专家咨询"
+  @nav_str = "客户关怀  > 专家咨询 > 在线提问"
+else
+  @title_str = "投诉建议"
+  @nav_str = "联系我们 > 投诉建议"
+end%>
+<% pagetitle(@title_str) %>
+
+<!--中间内容信息-->
+
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav">
+          <%=@nav_str%>
+        </ul>
+      </div>
+
+
+      <div class="consultonline">
+        <%= error_messages_for :special_consult %>
+        <% if flash[:notice] -%>
+          <div id="notice"><font color="red"><%= flash[:notice] %></font></div>
+        <% end -%>
+        <% if flash[:error] -%>
+          <div id="error"><font color="red"><%= flash[:error] %></font></div>
+        <% end -%>
+        <ul class="ours">请填写您的信息及意见发给我们, <font style="color:#f00; font-weight:bold">*</font> 内容为必填。 </ul>
+        <ul>
+          <% form_for :special_consult, :url => special_consults_path,:html =>{:id => "consultform"} do |f| -%>
+
+            <table width="90%" border="0" cellspacing="4" cellpadding="0">
+              <tr>
+
+                <td width="12%" height="25"><font style="color:#f00; font-weight:bold">*</font> 姓名</td>
+                <td width="88%"><%= f.text_field :name,:class=>"consult_form" %></td>
+              </tr>
+              <tr>
+                <td height="25">电子邮箱 </td>
+                <td><%= f.text_field :email,:class=>"consult_form" %></td>
+              </tr>
+              <tr>
+                <td height="25">&nbsp;</td>
+                <td>请填写真实的联系电话,以便我们跟踪处理您的问题</td>
+              </tr>
+              <tr>
+                <td height="25"><font style="color:#f00; font-weight:bold">*</font> 手机 	</td>
+                <td><%= f.text_field :mobile,:class=>"consult_form" %></td>
+              </tr>
+              <tr>
+                <td height="25">固定电话 </td>
+                <td><%= f.text_field :tel,:class=>"consult_form" %></td>
+              </tr>
+              <tr>
+                <td height="25">问题类别</td>
+                <td><table width="90%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <%if params[:consult]=="complaint"%>
+                        <%i=0
+                        QuestionType.find(:all,:conditions=>["question_types.name <> ?","咨询"]).each do |question_type|%>
+
+                          <%if i==0%>
+                            <td width="9%">
+                              <%= f.radio_button 'question_type_id',question_type.id ,:checked => true%>
+                            </td>
+                            <td width="9%"><%=question_type.name%></td>
+                          <%else%>
+                            <td width="8%"><%= f.radio_button 'question_type_id',question_type.id %></td>
+                            <td width="74%"><%=question_type.name%></td>
+                          <%end%>
+                          <%i=i+1
+                        end%>
+                      <%else%>
+                        <%i=0
+                        QuestionType.find(:all).each do |question_type|%>
+                          <%if i<2%>
+                            <td width="9%">
+                              <%if i==0%>
+                                <%= f.radio_button 'question_type_id',question_type.id ,:checked => true%>
+                              <%else%>
+                                <%= f.radio_button 'question_type_id',question_type.id %>
+                              <%end%></td>
+                            <td width="9%"><%=question_type.name%></td>
+                          <%else%>
+                            <td width="8%"><%= f.radio_button 'question_type_id',question_type.id %></td>
+                            <td width="56%"><%=question_type.name%></td>
+                          <%end%>
+                          <%i=i+1
+                        end%>
+                      <%end%>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign="top" height="25" style="padding-top:10px"><font style="color:#f00; font-weight:bold">*</font> 留言</td>
+                <td style="padding-top:10px"><%= f.text_area :question,:style=>"width:450px; height:125px" %>
+                </td>
+              </tr>
+              <tr>
+                <td height="45">&nbsp;</td>
+                <td valign="bottom"><%=image_submit_tag "submit.gif",:title=>"提交" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <%=link_to_function image_tag("cancel.gif", :size => "55x23",:border=>0),"jQuery('#consultform').reset();",:title=>"重置"%>
+
+                </td>
+              </tr>
+            </table>
+          <%end%>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>
+
+
+
+
+

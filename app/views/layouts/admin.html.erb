@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="熙济生物科技" />
+    <meta name="keywords" content="熙济生物科技" />
+    <title>后台管理系统-熙济生物科技</title>
+    <%= stylesheet_link_tag "login","as_overrides" %>
+
+    <%= javascript_include_tag 'prototype', 'effects' %>
+    <%= javascript_include_tag :defaults %>
+    <%= active_scaffold_includes %>
+    <script type="text/javascript">
+      jQuery.noConflict();
+    </script>
+
+    <%= javascript_include_tag :fckeditor %>
+  </head>
+  <body>
+
+    <div id="mid">
+      <div id="header">
+        <ul><li><img src="/images/logo.gif" width="197" height="74" border="0" /></li></ul>
+      </div>
+      <div id="system"><img src="/images/system.gif" width="230" height="30" border="0" /></div>
+      <div id="list">
+        <div class="listleft">
+          <ul>
+            <%= render :partial => 'layouts/menu' %>
+
+          </ul>
+        </div>
+        <div align="center">
+          <% if flash[:notice] -%>
+            <div id="notice"><font color="red"><%= flash[:notice] %></font></div>
+          <% end -%>
+          <% if flash[:error] -%>
+            <div id="error"><font color="red"><%= flash[:error] %></font></div>
+          <% end -%>
+        </div>
+        <div class="listright_content">
+          <%= yield :layout%>
+        </div>
+
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+
+<tr >
+
+  <td><%= xiji_newe.title -%></td>
+  <td><%= truncate(xiji_newe.body,100,'...') -%></td>
+
+    <td>[<%=link_to "查看",adminpanel_xiji_newe_path(xiji_newe)%>&nbsp;
+      <%=link_to "编辑",edit_adminpanel_xiji_newe_path(xiji_newe)%>&nbsp;
+      <%=link_to "删除", adminpanel_xiji_newe_path(xiji_newe), :confirm => "确定删除该熙济新闻吗?", :method => :delete%>
+      ]</td>
+</tr>
+

@@ -1,0 +1,23 @@
+<% pagetitle(t(:product)) %>
+
+
+<!--中间内容信息-->
+<div class="contenterright">
+
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav">产品目录 > <%=@top_product.name%></ul>
+      </div>
+      <%=render :partial=>"product_list"%>
+
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+
+<%=render :partial=>"layouts/left_side"%>
+
+
+

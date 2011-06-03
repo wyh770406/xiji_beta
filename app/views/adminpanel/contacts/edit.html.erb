@@ -1,0 +1,11 @@
+<%= error_messages_for :contact %>
+<% form_for :contact,
+  :url => adminpanel_contact_url(@contact),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "contact", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

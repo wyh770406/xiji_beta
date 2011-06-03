@@ -1,0 +1,12 @@
+
+<tr >
+
+  <td><%= recent_newe.title -%></td>
+  <td><%= truncate(recent_newe.body,100,'...') -%></td>
+
+    <td>[<%=link_to "查看",adminpanel_recent_newe_path(recent_newe)%>&nbsp;
+      <%=link_to "编辑",edit_adminpanel_recent_newe_path(recent_newe)%>&nbsp;
+      <%=link_to "删除", adminpanel_recent_newe_path(recent_newe), :confirm => "确定删除该最新资讯吗?", :method => :delete%>
+      ]</td>
+</tr>
+

@@ -1,0 +1,47 @@
+@charset "utf-8";
+body,td,th {font-size: 12px; color: #000;margin:0px;padding:0px;}
+body {font-family: Arial, Helvetica, sans-serif; background:#fff; }
+ul,li,dl,dd,dt,h1,h2,h3,h4,h5,form,p,dl,dt,dd,ol{ padding:0; margin:0;}
+ul{ list-style-type:none}
+form, h1, h2, h3, h4, h5, h6 {margin:0px;padding:0px;}
+a:link {color: #333;text-decoration: none;}
+a:visited {text-decoration: none;color: #333;}
+a:hover {text-decoration:underline;	color: #333;}
+a.a1:link,a.a1:visited {color: #075ebb;text-decoration: none;}
+a.a1:hover {text-decoration:underline;	color: #075ebb;}
+
+/**头部css**/
+#mid{width:1100px;height:750px; background:#eee; margin:0px auto; padding-bottom:50px}
+#header{ width:1000px; margin:0px auto; padding:30px 0px}
+#banner{ width:672px; margin:0px auto}
+#login_form{ width:238px; margin:0px auto; padding:30px 0px;}
+.login_input{ background:url(../images/loginkuan.gif) no-repeat; width:162px; height:78px; padding-top:64px; padding-left:76px;}
+.login_input li input{ background:#fff; border:none; border-left:1px solid #787274;border-top:1px solid #787274;}
+.denglu{ width:105px; margin:20px auto;}
+#system{ width:230px; height:30px; margin:0px auto}
+#list{ width:1050px; margin:28px auto;}
+#list .listleft{ width:150px; float:left; background:#d2d2d2; padding:10px; padding-top:5px; height:580px;}
+.listleft ul li.current{ font-weight:bold; color:#000}
+.listleft ul li{ line-height:44px; border-top:1px dashed #fff; font-family: "黑体"; font-size:16px; text-align:center;}
+.listright{ width:810px; background:#b19b5f; float:right;}
+.listright_content{width:850px;float:right;padding:5px;}
+.listright img{ height:454px; width:305px; overflow:hidden; float:left}
+.listright .rightlist{ float:left; margin-left:30px; margin-top:48px}
+.rightlist li{ margin-bottom:10px; font-size:14px;font-family: "黑体"; color:#000; font-weight:bold; line-height:28px}
+.clear{ clear:both}
+
+.listoneright{ width:610px; float:right;}
+.toptitle ul li{ float:right; line-height:28px}
+.toptitle ul li.title{ float:left; color:#4f4c43; font-weight:bold; font-size:20px;font-family: "黑体";}
+a.search:link{ background: url(../images/search.gif) no-repeat; padding-left:20px; color:#075ebb; font-weight:bold}
+a.search:visited{ background: url(../images/search.gif) no-repeat; padding-left:20px; color:#075ebb;font-weight:bold}
+a.search:hover{ background: url(../images/search.gif) no-repeat; padding-left:20px; color:#075ebb;font-weight:bold}
+a.news:link{ background: url(../images/news.gif) no-repeat; padding-left:18px; color:#075ebb; font-weight:bold}
+a.news:visited{ background: url(../images/news.gif) no-repeat; padding-left:18px; color:#075ebb;font-weight:bold}
+a.news:hover{ background: url(../images/news.gif) no-repeat; padding-left:18px; color:#075ebb;font-weight:bold}
+.white{ font-size:12px; font-weight:bold; color:#fff; padding-left:5px}
+.listtable tr td{ padding:3px}
+.rightintro ul li{ float:left; line-height:20px}
+.rightintro ul li.suominglist{ width:210px}
+.page{ text-align:center; line-height:40px;}
+.page_form{ width:30px; background:#fff; border:1px solid #ccc; margin:0px 2px}

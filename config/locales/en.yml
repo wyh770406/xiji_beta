@@ -1,0 +1,102 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  home_page: "Home"
+  return_homepage: "Home"
+  return_homepage_url: "/?locale=en"
+  company: "Company"
+  langvercn: "Chinese Version"
+  langveren: "English Version"
+  company_name: "Enzo Rodi(Shanghai)Plumbing & Sanirary Ware CO.,LTD. "
+  company_addr: "L 17th floor,Huamin Empire Plaza,No.726 West Yan'an Road,Shanghai"
+  xiji: "XiJi Biology Tech."
+  company_history: "History"
+  company_profile: "Company Profile"
+  core_spirit: "Core Spirit"
+  product: "Product"
+  ad_tech: "Adhesive Tech."
+  service: "Service"
+  dealer: "Dealer"
+  contact: "Contact"
+  contact_us: "Contact Us"
+  service_download: "Download"
+  bullet_home: "English website is under construction,please link to Roman Dietsche site for more information."
+  compinfo_addr: "Address"
+  compinfo_tel: "Tel"
+  compinfo_fax: "Fax"
+  compinfo_email: "E-Mail"
+  compinfo_hotline: "Service Hotline"
+  stick_techpic: "/images/er_klebetechnik_eng.jpg"
+  logo_home: "/images/logo_eng.jpg"
+  logo_width: "360"
+  logo_height: "75"
+  adtech_note: "Note: To play this content,you need install QuickTime media palyer first."
+  download_quicktime: "Download QuickTime Player"
+  download_pdf: "Download Adobe Reader(PDF)"
+  techinfo_download: "Provide various tech infos to download"
+  shop_name: "Name"
+  shop_abbr: "Short Title"
+  shop_addr: "Address"
+  shop_tel: "Phone"
+  shop_city: "City"
+  shop_area: "Region"
+  shop_hq: "Headquarter"
+  shop_dept: "Department"
+
+  client_name: "Name"
+  client_tel: "Tel"
+  client_fax: "Fax"
+  client_addr: "Address"
+  client_email: "E-MAIL"
+  client_desc: "Memo"
+  client_notice: "All marked with (*) are mandatory fields."
+  client_send: "Send"
+
+  send_succ: "Send successfully"
+  send_fail: "Send Failed"
+
+  "are_you_sure_to_delete" : "你确定删除吗?"
+  show_model: "显示记录"
+  create_model: "创建记录"
+  update_model: "更新记录"
+  updated_model: "记录已更新"
+  created_model: "记录已创建"
+  deleted_model: "记录已删除"
+  nested_for_model: '{{nested_model}} for {{parent_model}}'
+
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    # Used in date_select and datime_select.
+    order:
+      - :year
+      - :month
+      - :day
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+
+# Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: ", and "

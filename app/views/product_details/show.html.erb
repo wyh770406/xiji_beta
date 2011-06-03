@@ -1,0 +1,41 @@
+<% pagetitle(@product_detail.name+ " - "+@product_detail.top_product.name) %>
+
+
+<!--中间内容信息-->
+
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav">产品目录 > <%=@product_detail.top_product.name%> > <%=@product_detail.name%></ul>
+      </div>
+      <div class="product_infor">
+        <dl>
+          <dt><%=image_tag(@product_detail.productimg.url(:large), :border=>0)%></dt>
+          <dd>
+            <span><%=@product_detail.name%></span>
+            <ul><li>更多详情，请单击以下链接：</li>
+              <li class="item"><%=link_to "性能",product_detail_path(@product_detail, :anchor => "performance"),:class=>"a1"%></li>
+              <li class="item"><%=link_to "可靠性",product_detail_path(@product_detail, :anchor => "reliability"),:class=>"a1"%></li>
+              <li class="item"><%=link_to "其他特性",product_detail_path(@product_detail, :anchor => "ocharacter"),:class=>"a1"%></li></ul>
+          </dd>
+        </dl>
+        <div class="clear"></div>
+        <ul style=" padding-top:20px">
+          <li><span>产品系列：</span><p><%=@product_detail.top_product.name%></p></li>
+          <li><span>产品名称：</span><p><%=@product_detail.name%> </p></li>
+          <li><span>产品介绍：</span><p><%=@product_detail.product_desc%></p> </li>
+
+
+
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="page"><%=link_to "返回",show_cat_product_path(@product_detail.top_product),:class=>"a1"%></div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>  
+</div>
+
+<%=render :partial=>"layouts/left_side"%>

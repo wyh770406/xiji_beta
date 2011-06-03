@@ -1,0 +1,42 @@
+<div class="productmulu1">
+  <div class="videolist" >
+    <!--<ul class="lefticon" ><a title="向左移" onclick="javascript:videolist_prev()"><img src="/images/videolefticon.gif" width="10" height="61" border="0" /></a></ul>
+    <ul class="righticon" ><a title="向右移" onclick="javascript:videolist_next()"><img src="/images/videorighticon.gif" width="10" height="61" border="0" /></a></ul>-->
+    <%@videopdf_downloads.each do |videopdf_download|%>
+      <div class="videolistmid1">
+        <ul><%=link_to image_tag(videopdf_download.videoimg.url(:thumb), :size => "188x102",:border=>0),videopdf_download_path(videopdf_download)%>
+          <span><%=link_to image_tag("video_play.gif", :size => "18x18",:border=>0),videopdf_download_path(videopdf_download)%></span></ul>
+        <ul><li><span><%=link_to videopdf_download.name,videopdf_download_path(videopdf_download)%></span></li></ul>
+      </div>
+    <%end%>
+
+  <!--  <div class="videolistmid1">
+      <ul><a href="#"><img src="/images/videoimg1.jpg" width="188" height="102" border="0" /></a> <span><a href="#"><img src="/images/video_play.gif" width="18" height="18" border="0" /></a></span></ul>
+    </div>
+    <div class="videolistmid1">
+      <ul><a href="#"><img src="/images/videoimg2.jpg" width="188" height="102" border="0" /></a> <span><a href="#"><img src="/images/video_play.gif" width="18" height="18" border="0" /></a></span></ul>
+    </div>
+    <div class="videolistmid1">
+      <ul><a href="#"><img src="/images/videoimg.jpg" width="188" height="102" border="0" /></a> <span><a href="#"><img src="/images/video_play.gif" width="18" height="18" border="0" /></a></span></ul>
+    </div>
+    <div class="videolistmid1">
+      <ul><a href="#"><img src="/images/videoimg1.jpg" width="188" height="102" border="0" /></a> <span><a href="#"><img src="/images/video_play.gif" width="18" height="18" border="0" /></a></span></ul>
+    </div>
+    <div class="videolistmid1">
+      <ul><a href="#"><img src="/images/videoimg2.jpg" width="188" height="102" border="0" /></a> <span><a href="#"><img src="/images/video_play.gif" width="18" height="18" border="0" /></a></span></ul>
+    </div>-->
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+<%if @videopdf_downloads.size==0%>
+<div class="productmulu1">
+对不起，尚未提供产品视频下载！
+</div>
+<%else%>
+<div class="page">
+<%= will_paginate  @videopdf_downloads,:prev_label   => '上一页',
+  :next_label   => '下一页'%>
+  共有 <%=@videopdf_downloads.total_entries%> 条视频记录, 分 <%=@videopdf_downloads.total_pages%> 页显示&nbsp;&nbsp;&nbsp;
+  </div>
+<%end%>

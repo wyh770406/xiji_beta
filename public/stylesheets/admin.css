@@ -1,0 +1,90 @@
+body { 
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: 微软雅黑,Microsoft YaHei,Helvetica,Tahoma,StSun,宋体,SimSun,sans-serif;
+}
+
+#content .wordsize
+{
+    font-size: 18px;
+}
+
+#header {
+    color: #BB0000;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 0px;
+    text-align: center;
+    padding-top: 1px;
+    font-size: 25px;
+}
+
+#container {
+    width: 1000px;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+#sidemenu {
+    font-size: 80%;
+    float: left;
+    width: 150px;
+    padding: 0;
+}
+
+#sidemenu ul {
+    list-style: none;
+    margin-left: 0px;
+    padding: 0;
+}
+
+
+
+#content { float: right; width: 850px; }
+
+
+
+th { background-color: #933; color: #fff; }
+tr.odd { background-color: #fcc; }
+tr.even { background-color: #ecc; }
+
+/* Image table styling */
+table#images { width: 100%;}
+table#images th { font-size: 95%; }
+table#images td { font-size: 90%; }
+
+/* User table styling */
+table#users { width: 100%;}
+table#users th { font-size: 95%; }
+table#users td { font-size: 90%; }
+
+a { color: #b00; }
+a:hover { background-color: #b00; color: #eee; }
+
+/* Photo gallery styling */
+#photos ul { list-style: none; }
+#photos li { display: inline; }
+
+#photos li a img {
+    margin: 10px;
+    padding: 5px;
+    background: #000;
+}
+
+#photo {
+    margin-bottom: 20px;
+    padding: 5px;
+    background: #000;
+}
+
+/* Tag cloud styling */
+.tag1 { font-size: 100%; }
+.tag2 { font-size: 120%; }
+.tag3 { font-size: 140%; }
+.tag4 { font-size: 160%; }
+.tag5 { font-size: 170%; }
+.tag6 { font-size: 180%; }
+
+

@@ -1,0 +1,60 @@
+<% pagetitle(t(:home_page)) %>
+<script type="text/javascript">
+  jQuery(function(){
+    videolist_init();
+  })
+</script>
+<div class="contenterright">
+  <div class="flashphoto">
+    <ul style="float:left"><img src="/images/flashphotoleft.gif" width="7" height="246" border="0" /></ul>
+    <ul style="float:right"><img src="/images/flashphotoright.gif" width="7" height="246" border="0" /></ul>
+    <div class="photolist" id="idTransformView2">
+      <ul class="slider slider2" id="idSlider2">
+        <li><a href="http://www.baidu.com"><img src="/flashphoto/01.jpg" width="678" height="242" border="0" /></a></li>
+        <li><a href="http://www.baidu.com"><img src="/flashphoto/02.jpg" width="678" height="242" border="0" /></a></li>
+        <li><a href="http://www.baidu.com"><img src="/flashphoto/03.jpg" width="678" height="242" border="0" /></a></li>
+        <li><a href="http://www.baidu.com"><img src="/flashphoto/01.jpg" width="678" height="242" border="0" /></a></li>
+        <li><a href="http://www.baidu.com"><img src="/flashphoto/02.jpg" width="678" height="242" border="0" /></a></li>
+      </ul>
+      <ul class="num" id="idNum2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+  </div>
+  <div class="contenterrightbottom">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul><span><%=link_to image_tag("more.gif", :size => "26x5",:border=>0),products_path,:title=>"更多"%></span>产品展示</ul>
+      </div>
+      <div class="productshowlist">
+        <%=render :partial=>"home_products_list"%>
+        <div class="clear"></div>
+      </div>
+      <div class="productshow">
+        <ul><span><%=link_to image_tag("more.gif", :size => "26x5",:border=>0),videopdf_downloads_path,:title=>"更多"%></span>产品视频</ul>
+      </div>
+      <div class="videokuan">
+        <ul>
+          <img src="/images/videotop.gif" width="650" height="20" border="0" />
+        </ul>
+        <div class="videolist" >
+          <ul class="lefticon" ><a title="向左移" onclick="javascript:videolist_prev()"><img src="/images/videolefticon.gif" width="10" height="61" border="0" /></a></ul>
+          <ul class="righticon" ><a title="向右移" onclick="javascript:videolist_next()"><img src="/images/videorighticon.gif" width="10" height="61" border="0" /></a></ul>
+          <%=render :partial=>"home_video_list"%>
+          <div class="clear"></div>
+        </div>
+        <ul><img src="/images/videobottom.gif" width="650" height="8" border="0" /></ul>
+      </div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>
+
+
+

@@ -1,0 +1,25 @@
+<div class="productmulu">
+  <ul>
+    <%    @product_details.each do |product_detail|%>
+      <li><%=link_to image_tag(product_detail.productimg.url(:thumb), :border=>0),product_detail_path(product_detail)%><br />
+        <span><%=link_to product_detail.name,product_detail_path(product_detail)%></span></li>
+    <%end%>
+
+  </ul>
+  <div class="clear"></div>
+</div>
+
+<%if @product_details.size==0%>
+<div class="productmulu">
+对不起，该系列尚未有相应产品！
+</div>
+<%else%>
+<div class="page">
+<%= will_paginate  @product_details,:prev_label   => '上一页',
+  :next_label   => '下一页'%>
+  共有 <%=@product_details.total_entries%> 条产品记录, 分 <%=@product_details.total_pages%> 页显示&nbsp;&nbsp;&nbsp;
+  </div>
+<%end%>
+
+
+

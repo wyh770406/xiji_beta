@@ -1,0 +1,20 @@
+<ul>
+
+  <li><%= link_to '产品类别', adminpanel_top_products_path %></li>
+  <li><%= link_to '下载中心', adminpanel_videopdf_downloads_path %></li>
+
+  <li><%= link_to '公司介绍', adminpanel_company_infos_path %></li>
+  <li><%= link_to '最新资讯', adminpanel_recent_newes_path %></li>
+  <li><%= link_to '熙济新闻', adminpanel_xiji_newes_path %></li>
+  <li><%= link_to '基础知识', adminpanel_basic_knowledges_path %></li>
+  <li><%= link_to '常见问答', adminpanel_frequent_asks_path %></li>
+  <li><%= link_to '专家咨询', adminpanel_question_types_path %></li>
+  <li><%= link_to '租赁服务', adminpanel_sleep_rents_path %></li>
+  <li><%= link_to '商务合作', adminpanel_business_cooperates_path %></li>
+  <li><%= link_to '联系方式', adminpanel_contacts_path %></li>
+  <li><%= link_to '人才招聘', adminpanel_talents_path %></li>
+
+  <li><%if logged_in?%><%= link_to '修改密码', edit_user_path(current_user) %><%end%></li>
+  <li><%= link_to '登出', logout_path %></li>
+
+</ul>

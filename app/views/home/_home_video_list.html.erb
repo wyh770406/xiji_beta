@@ -1,0 +1,8 @@
+<% @home_videopdf_downloads.each do |home_videopdf_download|%>
+
+  <div class="videolistmid">
+    <ul><%=link_to image_tag(home_videopdf_download.videoimg.url(:thumb), :size => "188x102",:border=>0),videopdf_download_path(home_videopdf_download)%>
+      <span><%=link_to image_tag("video_play.gif", :size => "18x18",:border=>0),videopdf_download_path(home_videopdf_download)%></span></ul>
+  </div>
+<%end%>
+

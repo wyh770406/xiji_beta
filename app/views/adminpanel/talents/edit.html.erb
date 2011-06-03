@@ -1,0 +1,11 @@
+<%= error_messages_for :talent %>
+<% form_for :talent,
+  :url => adminpanel_talent_url(@talent),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "talent", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

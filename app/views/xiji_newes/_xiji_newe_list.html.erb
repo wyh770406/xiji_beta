@@ -1,0 +1,14 @@
+<div class="intro">
+  <ul>
+    <%@xiji_newes.each do |xiji_newe|%>
+    <li><span><%=xiji_newe.created_at.strftime("%Y-%m-%d")%></span><%=link_to xiji_newe.title,xiji_newe_path(xiji_newe)%></li>
+    <%end%>
+
+<div class="page"> <%= will_paginate  @xiji_newes,:prev_label   => '上一页',
+  :next_label   => '下一页'%>
+  共有 <%=@xiji_newes.total_entries%> 条记录, 分 <%=@xiji_newes.total_pages%> 页显示&nbsp;&nbsp;&nbsp;
+ </div>
+  </ul>
+</div>
+
+

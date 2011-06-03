@@ -1,0 +1,21 @@
+<%pagetitle(@xiji_newe.title+" - 熙济新闻")%>
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav"> 关于我们 > 熙济新闻 > <%=@xiji_newe.title%></ul>
+      </div>
+      <div class="article">
+        <h1><%=@xiji_newe.title%></h1>
+        <ul class="time">阅读次数：<%=@view_count%>次&nbsp;&nbsp;&nbsp;&nbsp; 发布日期：<%=@xiji_newe.created_at.strftime("%Y-%m-%d")%></ul>
+        <ul>
+          <%=@xiji_newe.body%>
+        </ul>
+      </div>
+      <div class="page"><%=link_to "返回列表",xiji_newes_path,:class=>"a1"%></div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>

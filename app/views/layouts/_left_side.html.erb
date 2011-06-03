@@ -1,0 +1,89 @@
+<div class="contenterleft">
+  <%
+  case  controller.controller_name
+  when "products"%>
+    <div class="search" style="margin-bottom:10px">
+      <ul><img src="/images/mulu.gif" width="236" height="33" border="0" /></ul>
+      <div class="searchbottom">
+        <%=render :partial=>"layouts/product"%>
+      </div>
+    </div>
+  <%
+  when "product_details"%>
+    <div class="search" style="margin-bottom:10px">
+      <ul><img src="/images/mulu.gif" width="236" height="33" border="0" /></ul>
+      <div class="searchbottom">
+        <%=render :partial=>"layouts/product"%>
+      </div>
+    </div>
+  <%
+  when "special_consults"%>
+    <%if params[:consult]!="complaint"%>
+      <div class="search" style="margin-bottom:10px">
+        <ul><img src="/images/consulttop.gif" width="236" height="33" border="0" /></ul>
+        <div class="searchbottom">
+          <%=render :partial=>"layouts/special_consult"%>
+        </div>
+      </div>
+    <%end%>
+  <%
+  when "videopdf_downloads"%>
+    <div class="search" style="margin-bottom:10px">
+      <ul><img src="/images/download.gif" width="236" height="33" border="0" /></ul>
+      <div class="searchbottom">
+        <%=render :partial=>"layouts/videopdf_download"%>
+      </div>
+    </div>
+  <%
+
+  else
+  end
+%>
+
+  <div class="search">
+    <ul><img src="/images/searchtop.gif" width="236" height="33" border="0" /></ul>
+    <div class="searchbottom">
+
+      <div class="searchbc">
+        <% form_tag '/products/search' do -%>
+          <span><%= image_submit_tag 'searchicon.gif',:title=>"搜索",:style=>"width:26px;height:26px;padding-left:0px;",:onclick=>"javascript:return keyval_check();" %></span>
+          <input type="text" id="keyval" name="keyval" class="search_form" value="请输入搜索关键字"  onfocus="javascript:jQuery(this).val('')"/>
+        <% end -%>
+
+      </div>
+    </div>
+  </div>
+  <div class="bussiness">
+    <ul><!--<li style="margin-left:50px"> <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=6fb8342971801858a3ab7ecc466e46089b823d88ee91ac471c752d54eaed02d9"; target=_blank; onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=6fb8342971801858a3ab7ecc466e46089b823d88ee91ac471c752d54eaed02d9';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:28194616:1' alt="点击这里给我发消息"></a></li>
+      <li> <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=6fb8342971801858a3ab7ecc466e46089b823d88ee91ac471c752d54eaed02d9"; target=_blank; onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=6fb8342971801858a3ab7ecc466e46089b823d88ee91ac471c752d54eaed02d9';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:28194616:1' alt="点击这里给我发消息"></a></li>-->
+      <li style="margin-left:50px"><a target="_blank" href="tencent://message/?uin=2236834122"><img src="http://wpa.qq.com/pa?p=1:2236834122:1" border="0"></a></li>
+      <li ><a target="_blank" href="tencent://message/?uin=2236834122"><img src="http://wpa.qq.com/pa?p=1:2236834122:1" border="0"></a></li>
+    </ul>
+  </div>
+  <div class="consult">
+    <ul>
+      <li><%=link_to image_tag("service.gif", :size => "236x86",:border=>0),sleep_rents_path,:title=>"租赁服务"%></li>
+      <li><%=link_to image_tag("consult.gif", :size => "236x86",:border=>0),new_special_consult_path,:title=>"专家咨询"%></li>
+    </ul>
+  </div>
+
+  <div class="searchtop">
+    <ul><img src="/images/partnertop.gif" width="236" height="33" border="0" /></ul>
+    <div class="searchbottom">
+      <ul class="scroll"><a title="向上移" onclick="javascript:partner_prev();"><img src="/images/upicon.gif" width="45" height="10" border="0" /></a></ul>
+      <ul class="partner">
+        <li><a href="http://www.fisherpaykel.com/"><img src="/images/fishpaykel.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.biomedic.cn/"><img src="/images/shenyuanmedical.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.huadonghospital.com/"><img src="/images/eastcnhosp.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.rjh.com.cn/"><img src="/images/ruijinhosp.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.huashan.org.cn/"><img src="/images/huashanhosp.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.renji.com/"><img src="/images/renjihosp.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.tongjihospital.com.cn/"><img src="/images/tongjihosp.jpg" width="208" height="38" border="0" /></a></li>
+        <li><a href="http://www.zshospital.com/"><img src="/images/zhongshanhosp.jpg" width="208" height="38" border="0" /></a></li>
+      </ul>
+      <ul class="scroll"><a title="向下移" onclick="javascript:partner_next();"><img src="/images/downicon.gif" width="45" height="10" border="0" /></a></ul>
+    </div>
+  </div>
+
+
+</div>

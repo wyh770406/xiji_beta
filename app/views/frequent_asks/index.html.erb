@@ -1,0 +1,30 @@
+<%pagetitle("常见问答")%>
+<div class="contenterright">
+  <div class="subcontenterright">
+    <ul><img src="/images/midtop.gif" width="692" height="8" border="0" /></ul>
+    <div class="rightbottommid">
+      <div class="productshow">
+        <ul class="subnav"> 客户关怀 > 常见问答</ul>
+      </div>
+      <div class="basal">
+        <ol>
+          <%@frequent_asks.each do |frequent_ask|%>
+          <li><%=frequent_ask.question%></li><p><%=frequent_ask.answer%></p>
+          <%end%>
+
+         <!-- <li>每天晚上佩戴会不会很麻烦，不方便？</li><p>不会，其实佩戴呼吸机非常简单，在您购买呼吸机时，一般都会有专业人员为您调好呼吸机及面罩松紧度，您只要在每天晚上睡觉前戴上面罩、开机就可以了。</p>
+          <li>	是不是要一辈子佩戴？</li><p>目前治疗睡眠呼吸暂停综合治疗症最有效的方法 就是佩戴呼吸机，一般佩戴治疗一段时间后症状会有明显好转。另外，随着现代医学科技的不断发展进步，以后的治疗法会越来越多，越来越方便，只要把握好现在，才能享受到未来。</p>
+          <li>	有没有副作用？</li><p>在初次佩戴呼吸机时，由于人体要开始适应一种新的睡眠方式，有些人可能会有一些不适反应，这些属于正常现象，一般经过几天时间的适应，不适反应会自动消除，无需担心。</p>-->
+        </ol>
+
+      </div>
+      <div class="clear"></div>
+    </div>
+    <ul><img src="/images/midbottom.gif" width="692" height="8" border="0" /></ul>
+  </div>
+</div>
+<%=render :partial=>"/layouts/left_side"%>
+
+
+
+

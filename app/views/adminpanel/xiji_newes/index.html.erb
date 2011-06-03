@@ -1,0 +1,23 @@
+<style type="text/css">
+
+  .news_tab,.news_tab td,.news_tab th {
+    border:1px solid #cccccc;
+    border-collapse:collapse; 
+    font-weight: normal;}
+</style>
+<div align=left><%=link_to "新增",new_adminpanel_xiji_newe_path%></div>
+<div  align="center" >
+  <h3 >熙济新闻<h3>
+    <table border="0" cellspacing="1" cellpadding="0" width="100%" class="news_tab">
+      <tr>
+        <th>熙济新闻标题</th>
+        <th>熙济新闻内容</th>
+      </tr>
+      <%= render :partial => 'xiji_newe', :collection => @xiji_newes %>
+    </table>
+    <div align=right><%= will_paginate  @xiji_newes,:prev_label   => '上一页',
+  :next_label   => '下一页'%></div>
+</div>
+
+
+

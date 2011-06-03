@@ -1,0 +1,11 @@
+<%= error_messages_for :sleep_rent %>
+<% form_for :sleep_rent,
+  :url => adminpanel_sleep_rent_url(@sleep_rent),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "sleep_rent", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

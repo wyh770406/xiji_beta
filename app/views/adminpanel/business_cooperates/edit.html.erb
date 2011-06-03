@@ -1,0 +1,11 @@
+<%= error_messages_for :business_cooperate %>
+<% form_for :business_cooperate,
+  :url => adminpanel_business_cooperate_url(@business_cooperate),
+  :html => { :method => :put } do |f| %>
+  <p><%= f.label :body,'内容:' %><br/>
+    <%=fckeditor_textarea( "business_cooperate", "body", :toolbarSet => 'Simple', :width => '800px', :height => '500px') %></p>
+
+  <p><%= submit_tag '修改' %></p>
+<% end -%>
+
+

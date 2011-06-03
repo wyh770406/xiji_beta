@@ -1,0 +1,14 @@
+<div class="intro">
+  <ul>
+    <%@recent_newes.each do |recent_newe|%>
+    <li><span><%=recent_newe.created_at.strftime("%Y-%m-%d")%></span><%=link_to recent_newe.title,recent_newe_path(recent_newe)%></li>
+    <%end%>
+
+<div class="page"> <%= will_paginate  @recent_newes,:prev_label   => '上一页',
+  :next_label   => '下一页'%>
+  共有 <%=@recent_newes.total_entries%> 条记录, 分 <%=@recent_newes.total_pages%> 页显示&nbsp;&nbsp;&nbsp;
+ </div>
+  </ul>
+</div>
+
+

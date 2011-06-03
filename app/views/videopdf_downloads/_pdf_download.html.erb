@@ -1,0 +1,23 @@
+
+
+<%if @videopdf_downloads.size==0%>
+  <div class="intro">
+    对不起，尚未提供产品资料下载！
+  </div>
+<%else%>
+  <div class="intro">
+    <ul>
+      <%@videopdf_downloads.each do |videopdf_download|%>
+        <li><span><%=videopdf_download.created_at.strftime("%Y-%m-%d")%></span><%=link_to videopdf_download.name,videopdf_download.videopdf.url ,:class=>"a1"%></li>
+      <%end%>
+
+    </ul>
+  </div>
+  <div class="page">
+    <%= will_paginate  @videopdf_downloads,:prev_label   => '上一页',
+      :next_label   => '下一页'%>
+    共有 <%=@videopdf_downloads.total_entries%> 条视频记录, 分 <%=@videopdf_downloads.total_pages%> 页显示&nbsp;&nbsp;&nbsp;
+  </div>
+<%end%>
+
+
